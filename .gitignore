@@ -18,3 +18,4 @@ bower_components/
 /lib
 /*.wav
 /*.amr
+out/
