@@ -16,6 +16,5 @@ tmp
 bower_components/
 ~*
 /lib
-/*.wav
-/*.amr
+*.jar
 out/

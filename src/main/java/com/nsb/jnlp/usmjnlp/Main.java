@@ -2,21 +2,23 @@ package com.nsb.jnlp.usmjnlp;
 
 import java.io.IOException;
 
+
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
-        System.out.println("Hello");
-        String color="red";
-        if(args.length>0){
-            color=args[0];
+        if(args.length<5){
+            System.out.println("Param error!");
+            return;
         }
-        String[] cmd = new String[]{"sh", "-c", "xlogo -fg "+color};
+
+        String[] cmd = new String[]{args[0], args[1], args[2], args[3], args[4]};
+        System.out.println(args[0]+" "+args[1]+" "+args[2]+" "+args[3]+" "+args[4]);
+
 
         try {
             Process ps = Runtime.getRuntime().exec(cmd);
             ps.waitFor();
-            System.out.println("Finished");
+            //System.out.println("Finished");
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println(e.toString());
@@ -26,6 +28,6 @@ public class Main {
         } catch(Exception e){
             System.out.println(e.toString());
         }
-        System.out.println("End");
+        //System.out.println("End");
     }
 }

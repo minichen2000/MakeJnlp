@@ -11,31 +11,31 @@ public class MakeJnlp extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        /*String color = request.getParameter("COLOR");
+
         String emlim_ip = request.getParameter("EMLIM_IP");
         String emlim_port = request.getParameter("EMLIM_PORT");
         String group_id = request.getParameter("GROUP_ID");
         String ne_id = request.getParameter("NE_ID");
         String jar_path=request.getParameter("JAR_PATH");
-        String jar_name=request.getParameter("JAR_NAME");*/
+        String jar_name=request.getParameter("JAR_NAME");
+        String bat_name=request.getParameter("BAT_NAME");
 
-        String color="green";
-        String emlim_ip="127.0.0.1";
-        String emlim_port="4000";
+        /*String emlim_ip="172.24.168.153";
+        String emlim_port="5028";
         String group_id="100";
         String ne_id="1";
         String jar_path="q3neusm";
-        String jar_name="q3neusm.jar";
+        String jar_name="q3neusm.jar";*/
 
         String protocol = request.getScheme();
         String ip = request.getServerName();
         int port = request.getServerPort();
         String app = request.getContextPath();
 
-        //String codebase=protocol + "://" + ip + ":" + port + "/" + "q3neusm";
-        String codebase="http://acv3.mobisoftwarestudio.com:8080/"+jar_path;
-        //String jnlp_href=protocol + "://" + ip + ":" + port + app+"/makejnlp?COLOR=green&EMLIM_IP=127.0.0.1&EMLIM_PORT=4000&GROUP_ID=100&NE_ID=1&JAR_PATH=q3neusm&JAR_NAME=q3neusm.jar";
-        String jnlp_href=protocol + "://" + ip + ":" + port + app+"/makejnlp";
+        String codebase=protocol + "://" + ip + ":" + port + "/" + jar_path;
+        //String codebase="http://135.251.103.125/"+jar_path;
+        String jnlp_href=protocol + "://" + ip + ":" + port + app+"/makejnlp?EMLIM_IP="+emlim_ip+"&amp;EMLIM_PORT="+emlim_port+"&amp;GROUP_ID="+group_id+"&amp;NE_ID="+ne_id+"&amp;JAR_PATH="+jar_path+"&amp;JAR_NAME="+jar_name+"&amp;BAT_NAME="+bat_name;
+        //String jnlp_href=protocol + "://" + ip + ":" + port + app+"/makejnlp";
         response.setContentType("application/x-java-jnlp-file");
         response.setHeader("Cache-Control","no-cache");
         response.setCharacterEncoding("utf-8");
@@ -60,7 +60,7 @@ public class MakeJnlp extends HttpServlet {
         out.println("</resources>");
 
         out.println("<application-desc main-class=\"com.nsb.jnlp.usmjnlp.Main\">");
-        out.println("<argument>"+ color +"</argument>");
+        out.println("<argument>"+ bat_name +"</argument>");
         out.println("<argument>"+ emlim_ip +"</argument>");
         out.println("<argument>"+ emlim_port +"</argument>");
         out.println("<argument>"+ group_id +"</argument>");

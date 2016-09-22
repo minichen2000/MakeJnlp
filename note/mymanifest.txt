@@ -1,4 +1,4 @@
 Permissions: all-permissions
-Codebase: http://acv3.mobisoftwarestudio.com:8080
+Codebase: http://135.251.103.125
 Application-Name: q3neusm
 Main-Class: com.nsb.jnlp.usmjnlp.Main

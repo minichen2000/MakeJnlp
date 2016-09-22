@@ -1,1 +1,1 @@
-http://acv3.mobisoftwarestudio.com:8080/makejnlp/makejnlp?COLOR=green&EMLIM_IP=127.0.0.1&EMLIM_PORT=4000&GROUP_ID=100&NE_ID=1&JAR_PATH=q3neusm&JAR_NAME=q3neusm.jar
+http://135.251.103.125/makejnlp/makejnlp?EMLIM_IP=172.24.168.153&EMLIM_PORT=5028&GROUP_ID=100&NE_ID=1&JAR_PATH=q3neusm&JAR_NAME=q3neusm.jar&BAT_NAME=run_usm.bat
