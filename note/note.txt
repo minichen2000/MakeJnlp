@@ -1,1 +1,1 @@
-http://135.251.103.125/makejnlp/makejnlp?EMLIM_IP=172.24.168.153&EMLIM_PORT=5028&GROUP_ID=100&NE_ID=1&JAR_PATH=q3neusm&JAR_NAME=q3neusm.jar&BAT_NAME=run_usm.bat
+http://172.24.168.153/makeusmjnlp?JNLP_JAR_PATH=http://172.24.168.153/q3neusm.jar&NE_TYPE=ne1662smc&NE_RELEASE=2.7B&GROUP_ID=100&NE_ID=1&NAMESERVERFILE_URL=http://172.24.168.153/NameServerFile.nr6

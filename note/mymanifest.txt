@@ -1,4 +1,4 @@
 Permissions: all-permissions
-Codebase: http://135.251.103.125
+Codebase: http://172.24.168.153
 Application-Name: q3neusm
 Main-Class: com.nsb.jnlp.usmjnlp.Main

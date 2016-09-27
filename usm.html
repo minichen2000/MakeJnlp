@@ -1,52 +1,82 @@
 <!DOCTYPE html>
 <html>
- <head>
- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta http-equiv="content-type" content="text/html;charset=utf-8">
-  <title> NE </title>
-<style>
-  body,button, input, select, textarea,a,h1 ,h2, h3, h4, h5, h6 {
-  font-family: Microsoft YaHei,'宋体' , Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
-  }</style>
- </head>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title> NE </title>
+    <style>
+        body, button, input, select, textarea, a, h1, h2, h3, h4, h5, h6 {
+            font-family: Microsoft YaHei, '宋体', Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+        }</style>
+</head>
+<script>
+    function formSubmit(){
+        document.getElementById("mainForm").action=document.getElementById("JNLP_PATH").value;
+        console.log("formSubmit");
+        document.getElementById("mainForm").submit()
+    }
+</script>
 
- <body>
-  <form action="http://135.251.103.125/makejnlp/makejnlp">
-<fieldset>
-<legend>Q3 NE USM Launcher</legend>
-<table>
-<tr>
-<td width="180">.bat Name:<br><br></td>
-<td ><input type="text" name="BAT_NAME" value="run_usm.bat" size="40" ><br><br></td>
-</tr>
-<tr>
-<td width="180">EMLIM_IP:<br><br></td>
-<td><input type="text" name="EMLIM_IP" value="172.24.168.153" size="40" ><br><br></td>
+<body>
+<fieldset style="width:640px">
+    <legend>Q3 NE USM Launcher</legend>
+    <fieldset>
+        <legend>USM JNLP Path</legend>
+        <table>
+            <tr>
+                <td width="250"><br>JNLP_PATH:<br><br></td>
+                <td><br><input id="JNLP_PATH" type="text" name="JNLP_PATH" value="http://172.24.168.153/makeusmjnlp" size="60"><br><br>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <br>
+    <form id="mainForm" action="">
 
-</tr>
 
-<tr>
-<td width="180">EMLIM_PORT:<br><br></td>
-<td><input type="text" name="EMLIM_PORT" value="5028" size="40" ><br><br></td>
-</tr>
-<tr>
-<td width="180">GROUP_ID:<br><br></td>
-<td><input type="text" name="GROUP_ID" value="100" size="40" ><br><br></td>
-</tr>
-<tr>
-<td width="180">NE_ID:<br><br></td>
-<td><input type="text" name="NE_ID" value="1" size="40" ><br><br></td>
-</tr>
-<tr>
-<td width="180">JNLP_JAR_PATH:<br><br></td>
-<td><input type="text" name="JAR_PATH" value="q3neusm" size="40" ><br><br></td>
-</tr>
-<tr>
-<td width="180">JNLP_JAR_NAME:<br><br></td>
-<td><input type="text" name="JAR_NAME" value="q3neusm.jar" size="40" ><br><br></td>
-</tr>
-</table>
-<input type="submit" value="启动">
+        <fieldset>
+            <legend>USM Jar Path</legend>
+            <table>
+                <tr>
+                    <td width="250"><br>JNLP_JAR_PATH:<br><br></td>
+                    <td><br><input type="text" name="JNLP_JAR_PATH" value="http://172.24.168.153/q3neusm.jar" size="60"><br><br>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Launcher parameters</legend>
+            <table>
+
+                <tr>
+                    <td width="250"><br>NE_TYPE:<br><br></td>
+                    <td><br><input type="text" name="NE_TYPE" value="ne1662smc" size="60"><br><br></td>
+                </tr>
+                <tr>
+                    <td width="250">NE_RELEASE:<br><br></td>
+                    <td><input type="text" name="NE_RELEASE" value="2.7B" size="60"><br><br></td>
+                </tr>
+                <tr>
+                    <td width="250">GROUP_ID:<br><br></td>
+                    <td><input type="text" name="GROUP_ID" value="100" size="60"><br><br></td>
+                </tr>
+                <tr>
+                    <td width="250">NE_ID:<br><br></td>
+                    <td><input type="text" name="NE_ID" value="1" size="60"><br><br></td>
+                </tr>
+                <tr>
+                    <td width="250">NAMESERVERFILE_URL:<br><br></td>
+                    <td><input type="text" name="NAMESERVERFILE_URL" value="http://172.24.168.153/NameServerFile.nr6"
+                               size="60"><br><br></td>
+                </tr>
+            </table>
+        </fieldset>
+        <br>
+        <!--<input type="submit" value="启动">-->
+        <input type="button" onclick="formSubmit()" value="启动">
+    </form>
 </fieldset>
-</form>
- </body>
+
+</body>
 </html>

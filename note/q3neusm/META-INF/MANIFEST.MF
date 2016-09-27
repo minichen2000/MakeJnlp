@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Application-Name: q3neusm
+Permissions: all-permissions
+Codebase: http://135.251.103.125
+Created-By: 1.8.0_101 (Oracle Corporation)
+Main-Class: com.nsb.jnlp.usmjnlp.Main
+
+Name: com/nsb/jnlp/usmjnlp/Utils.class
+SHA-256-Digest: sZxC/AetYOOfZl0Nws3Fe/JT2zGp8ylEc/KzS04AGn8=
+
+Name: com/nsb/jnlp/usmjnlp/Main.class
+SHA-256-Digest: sUC+O4pW6PdUHAF9miDy3T56bPWR/utUEdOc0otauQo=
+

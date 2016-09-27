@@ -7,7 +7,7 @@
         version="3.1">
 
 
-    <servlet>
+<!--    <servlet>
         <servlet-name>default</servlet-name>
         <servlet-class>org.eclipse.jetty.servlet.DefaultServlet</servlet-class>
         <init-param>
@@ -18,11 +18,11 @@
     <servlet-mapping>
         <servlet-name>default</servlet-name>
         <url-pattern>/</url-pattern>
-    </servlet-mapping>
+    </servlet-mapping>-->
 
 
     <servlet>
-        <servlet-name>MakeJnlp</servlet-name>
+        <servlet-name>MakeUsmJnlp</servlet-name>
         <servlet-class>com.nsb.jnlp.makejnlp.MakeJnlp</servlet-class>
         <init-param>
             <param-name>useFileMappedBuffer</param-name>
@@ -31,8 +31,9 @@
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>MakeJnlp</servlet-name>
-        <url-pattern>/makejnlp/*</url-pattern>
+        <servlet-name>MakeUsmJnlp</servlet-name>
+        <!--<url-pattern>/makejnlp/*</url-pattern>-->
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
     <mime-mapping>
         <extension>jnlp</extension>
